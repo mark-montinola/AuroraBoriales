@@ -1,0 +1,191 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - AuroraBoriales</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <!-- NAVIGATION -->
+        <section class="container-fluid fixed-top p-0">
+            <nav id="nav" class="navbar navbar-expand-lg">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Aurora Boriales</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <svg class="bi bi-list" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                    </svg>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Discover" asp-action="Index">Discover</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Events" asp-action="Index">Events</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="About" asp-action="Index">About</a>
+                        </li>
+                    </ul>
+
+                    <ul class="navbar-nav justify-content-end">
+                        <li class="nav-item">
+                            <a class="nav-link" href="Identity/Account/Login">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Identity/Account/Register">Register</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </section>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+        @RenderBody()
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="p-4">
+        <div class="row">
+
+            <!-- NAVIGATE -->
+            <section class="col-12 col-md-2">
+                <h5 class="section-footer-heading">
+                    Navigate
+                </h5>
+                <div class="section-footer-navigate">
+                    <ul>
+                        <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                        <li><a asp-area="" asp-controller="Discover" asp-action="Index">Discover</a></li>
+                        <li><a asp-area="" asp-controller="Events" asp-action="Index">Events</a></li>
+                        <li><a asp-area="" asp-controller="About" asp-action="Index">About</a></li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- ABOUT US -->
+            <section class="col-12 col-md-6">
+                <h5 class="section-footer-heading">
+                    About Us
+                </h5>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti dolorum, sint corporis nostrum,
+                    possimus unde eos vitae eius quasi saepe.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti dolorum, sint corporis nostrum,
+                    possimus unde eos vitae eius quasi saepe.
+                </p>
+
+            </section>
+
+            <!-- CONTACT INFO -->
+            <section class="col-12 col-md-4">
+
+                <!-- HEADER 1 -->
+                <h5 class="section-footer-heading">
+                    Contact info
+                </h5>
+
+                <!-- BODY 1 -->
+                <ul class="section-footer-info">
+                    <li>
+                        <svg class="bi bi-geo-alt" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                  d="M8 16s6-5.686 6-10A6 6 0 002 6c0 4.314 6 10 6 10zm0-7a3 3 0 100-6 3 3 0 000 6z"
+                                  clip-rule="evenodd" />
+                        </svg>
+                        1234 Edmonton, Canada
+                    </li>
+                    <li>
+                        <svg class="bi bi-phone" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                  d="M11 1H5a1 1 0 00-1 1v12a1 1 0 001 1h6a1 1 0 001-1V2a1 1 0 00-1-1zM5 0a2 2 0 00-2 2v12a2 2 0 002 2h6a2 2 0 002-2V2a2 2 0 00-2-2H5z"
+                                  clip-rule="evenodd" />
+                            <path fill-rule="evenodd" d="M8 14a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd" />
+                        </svg>
+                        +1 123 456 7890
+                    </li>
+                    <li>
+                        <svg class="bi bi-envelope-fill" width="1em" height="1em" viewBox="0 0 16 16"
+                             fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M.05 3.555L8 8.414l7.95-4.859A2 2 0 0014 2H2A2 2 0 00.05 3.555zM16 4.697l-5.875 3.59L16 11.743V4.697zm-.168 8.108L9.157 8.879 8 9.586l-1.157-.707-6.675 3.926A2 2 0 002 14h12a2 2 0 001.832-1.195zM0 11.743l5.875-3.456L0 4.697v7.046z" />
+                        </svg>
+                        <a href="mailto:admin@domain.com">admin@domain.com</a>
+                    </li>
+                </ul>
+
+            </section>
+
+        </div>
+
+        <!-- COPYRIGHT -->
+        <section class="copyright text-center">
+            <br>
+            © <span>2020</span> kram. All rights reserved.
+        </section>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        window.onscroll = function () {
+            let nav = document.getElementById("nav");
+            let navbar = document.getElementsByClassName("navbar-collapse")[0];
+            let navButton = document.getElementsByClassName("navbar-toggler")[0];
+            if (document.documentElement.scrollTop >= 200) {
+                if (!nav.classList.contains("navbar-dark")) {
+                    nav.classList.add("navbar-dark");
+                }
+            } else {
+                if (window.getComputedStyle(navButton).display === "none") {
+                    if (nav.classList.contains("navbar-dark")) {
+                        nav.classList.remove("navbar-dark");
+                    }
+                } else {
+                    if (navbar.classList.contains("show")) {
+                        if (!nav.classList.contains("navbar-dark")) {
+                            nav.classList.add("navbar-dark");
+                        }
+                    } else {
+                        if (nav.classList.contains("navbar-dark")) {
+                            nav.classList.remove("navbar-dark");
+                        }
+                    }
+                }
+            }
+        }
+
+        // Add event listener in navbar-toggle
+        let nav = document.getElementById("nav");
+        let navButton = document.getElementsByClassName("navbar-toggler")[0];
+        navButton.addEventListener("click", function () {
+            if (!nav.classList.contains("navbar-dark")) {
+                nav.classList.toggle("navbar-dark");
+            } else {
+                if (document.documentElement.scrollTop < 200 && nav.classList.contains("navbar-dark")) {
+                    nav.classList.toggle("navbar-dark");
+                }
+            }
+        });
+
+    </script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <!-- Flickity -->
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
