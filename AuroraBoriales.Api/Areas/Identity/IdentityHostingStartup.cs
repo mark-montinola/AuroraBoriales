@@ -18,7 +18,7 @@ namespace AuroraBoriales.Api.Areas.Identity
             builder.ConfigureServices((context, services) => {
                 services.AddDbContext<AuroraBorialesApiContext>(options =>
                     options.UseSqlServer(
-                        context.Configuration.GetConnectionString("AuroraBorialesApiContextConnection")));
+                        context.Configuration.GetConnectionString("DefaultConnection")));
 
                 services.AddDefaultIdentity<AuroraBorialesApiUser>(options => options.SignIn.RequireConfirmedAccount = true)
                     .AddEntityFrameworkStores<AuroraBorialesApiContext>();
